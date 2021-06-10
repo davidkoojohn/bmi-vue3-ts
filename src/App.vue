@@ -19,14 +19,6 @@ export default defineComponent({
 })
 </script>
 
-<style scoped>
-.app {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-</style>
-
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
