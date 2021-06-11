@@ -5,6 +5,8 @@
       |
       <router-link :to="{name: 'Task'}">Task</router-link>
       |
+      <router-link :to="{name: 'TS'}">TypeScript</router-link>
+      |
       <router-link to="/about">About</router-link>
     </p>
     <router-view></router-view>
