@@ -1,29 +1,23 @@
 <template>
-  <h1>{{ title }}</h1>
   <button @click="reverseTitle">reverse title</button>
   <ul>
     <li v-for="(item, index) of list">{{index + 1}}. {{item.title}}</li>
   </ul>
   <input type="text" v-model="text">
   <button @click="createItem">Add Item #{{ listCount }}</button>
-
   <hr>
-
-  <ol>
-    <li v-for="(item, index) of taskList">{{item.content}}</li>
-  </ol>
-
-
+  <list :list="taskList" :title="title"/>
 </template>
 
 <script lang="ts">
 import { defineComponent, ref, reactive, computed, onMounted, watch } from 'vue'
 import axios from 'axios'
+import TaskListComponent from '../components/TaskListComponent.vue'
 
 export default defineComponent({
-  name: 'Task',
+  components: {List: TaskListComponent},
   setup: () => {
-    const title = ref('Task Title')
+    const title = ref('Task For Vue3 Setup')
     const reverseTitle = () => {
       title.value = title.value.split('').reverse().join('')
     }
@@ -50,17 +44,10 @@ export default defineComponent({
       const { data: res} = await axios.request({
         url:'https://api.yizhanketang.cn/api/v1/todos'
       })
-      console.log(res.data)
       taskList.value = res.data
     }
 
     onMounted(getTaskList)
-
-    /*watch(taskList, (newValue, oldValue) => {
-      console.log('newValue', newValue)
-      console.log('oldValue', oldValue)
-      console.log('The new taskList value is: ', taskList.value)
-    })*/
 
     return {
       taskList,
@@ -74,11 +61,3 @@ export default defineComponent({
   }
 })
 </script>
-
-<style scoped>
-ul {
-  list-style: none;
-}
-</style>
-
-
