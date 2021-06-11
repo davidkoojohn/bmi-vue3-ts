@@ -6,11 +6,11 @@
   <input type="text" v-model="text">
   <button @click="createItem">Add Item #{{ listCount }}</button>
   <hr>
-  <list :list="taskList" :title="title"/>
+  <list :list="taskList"/>
 </template>
 
 <script lang="ts">
-import { defineComponent, ref, reactive, computed, onMounted, watch } from 'vue'
+import { defineComponent, ref, reactive, computed, onMounted, provide, readonly } from 'vue'
 import axios from 'axios'
 import TaskListComponent from '../components/TaskListComponent.vue'
 
@@ -18,6 +18,10 @@ export default defineComponent({
   components: {List: TaskListComponent},
   setup: () => {
     const title = ref('Task For Vue3 Setup')
+
+    // provide('title', title)
+    provide('title', readonly(title))
+
     const reverseTitle = () => {
       title.value = title.value.split('').reverse().join('')
     }

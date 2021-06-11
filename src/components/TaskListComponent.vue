@@ -6,7 +6,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent, inject } from 'vue'
 import TaskItemComponent from './TaskItemComponent.vue'
 
 export default defineComponent({
@@ -16,11 +16,13 @@ export default defineComponent({
       type: Array,
       default: () => []
     },
-    title: {
-      type: String,
-      required: true
-    }
   },
-  setup(props, context) {}
+  setup(props, context) {
+    const title = inject('title')
+
+    return {
+      title
+    }
+  }
 })
 </script>
