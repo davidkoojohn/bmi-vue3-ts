@@ -1,6 +1,7 @@
 lockfileVersion: 5.3
 
 specifiers:
+  '@types/mockjs': ^1.0.3
   '@vitejs/plugin-vue': ^1.2.3
   '@vue/compiler-sfc': ^3.0.5
   axios: ^0.21.1
@@ -20,6 +21,7 @@ dependencies:
   vue-router: registry.nlark.com/vue-router/4.0.8_vue@3.1.1
 
 devDependencies:
+  '@types/mockjs': registry.nlark.com/@types/mockjs/1.0.3
   '@vitejs/plugin-vue': registry.nlark.com/@vitejs/plugin-vue/1.2.3_@vue+compiler-sfc@3.0.11
   '@vue/compiler-sfc': registry.nlark.com/@vue/compiler-sfc/3.0.11_vue@3.1.1
   typescript: registry.nlark.com/typescript/4.3.2
@@ -373,6 +375,12 @@ packages:
       '@babel/helper-validator-identifier': registry.nlark.com/@babel/helper-validator-identifier/7.14.5
       to-fast-properties: registry.nlark.com/to-fast-properties/2.0.0
     dev: false
+
+  registry.nlark.com/@types/mockjs/1.0.3:
+    resolution: {integrity: sha1-vY7jx8u9mhh4irZ3ueT5fI0LsL8=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/@types/mockjs/download/@types/mockjs-1.0.3.tgz}
+    name: '@types/mockjs'
+    version: 1.0.3
+    dev: true
 
   registry.nlark.com/@vitejs/plugin-vue/1.2.3_@vue+compiler-sfc@3.0.11:
     resolution: {integrity: sha1-Lo4AixzDpq0d++x1dDx//ZtIcqY=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/@vitejs/plugin-vue/download/@vitejs/plugin-vue-1.2.3.tgz}

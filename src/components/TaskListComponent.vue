@@ -1,7 +1,7 @@
 <template>
   <h1>{{title}}</h1>
   <ol>
-    <item v-for="item of list" :item-data="item"/>
+    <li></li>
   </ol>
 </template>
 
