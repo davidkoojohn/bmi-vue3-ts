@@ -221,3 +221,24 @@ document.addEventListener('click', function (event: MouseEvent) {
   - `markRaw`: 标记的对象从此后都不能成为代理对象
 
 - `toRef()`：相当于拷贝了一份，响应式互通的 `toRef(state, 'age')`
+
+- `isRef`(ref对象)、`isReactive`(reactive创建)、`isReadonly`(readonly只读)、`isProxy`(reactive或readonly)
+
+- 异步引入组件 
+  ```
+  const xxx = defineAsyncComponent(() => import('../xxx.vue')
+  ```
+- `Fragment`是在template中不用根标签
+- `Teleport`将组件移入其他dom位置，可用于model在body中显示
+- `Suspense` 组件
+  ```
+  <Suspense>
+    <template #default>
+      异步组件或者内容
+    </template>
+    <template v-slot:fallback>
+      Loading
+    </template>
+  </Suspense>
+  ```
+
