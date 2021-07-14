@@ -4,6 +4,7 @@ import ViteComponents, { AntDesignVueResolver } from 'vite-plugin-components'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: '/ganhuo-vue3/',
   plugins: [
     vue(),
     ViteComponents({
