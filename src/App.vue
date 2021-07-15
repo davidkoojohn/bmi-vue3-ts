@@ -1,14 +1,5 @@
 <template>
-  <div class="app">
-    <p>
-      <router-link to="/">Home</router-link>
-      |
-      <router-link :to="{name: 'TS'}">TypeScript</router-link>
-      |
-      <router-link to="/about">About</router-link>
-    </p>
-    <router-view></router-view>
-  </div>
+  <router-view></router-view>
 </template>
 
 <script lang="ts">
