@@ -1,7 +1,7 @@
 <template>
   <a-layout>
-    <a-layout-header style="color: #fff">
-      Header
+    <a-layout-header>
+      <app-header-component/>
     </a-layout-header>
     <a-layout-content style="background-color: #fff">
       <slot></slot>
@@ -12,6 +12,6 @@
   </a-layout>
 </template>
 
-<style scoped>
-
-</style>
+<script setup lang="ts">
+import AppHeaderComponent from '../components/AppHeaderComponent.vue'
+</script>

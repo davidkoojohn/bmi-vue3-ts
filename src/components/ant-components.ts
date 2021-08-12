@@ -1,5 +1,15 @@
 
-import { Button, Row, Col, Tooltip } from 'ant-design-vue';
+import {
+  Button,
+  Row,
+  Col,
+  Tooltip,
+  Drawer,
+  Menu,
+  MenuItem,
+  MenuItemGroup,
+  SubMenu
+} from 'ant-design-vue';
 
 
 export default (app: any) => {
@@ -7,6 +17,11 @@ export default (app: any) => {
   app.use(Row);
   app.use(Col);
   app.use(Tooltip);
+  app.use(Drawer);
+  app.use(Menu);
+  app.use(MenuItem);
+  app.use(MenuItemGroup);
+  app.use(SubMenu);
 }
 
 
