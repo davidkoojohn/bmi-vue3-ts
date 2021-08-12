@@ -8,7 +8,8 @@ import {
   Menu,
   MenuItem,
   MenuItemGroup,
-  SubMenu
+  SubMenu,
+  Carousel
 } from 'ant-design-vue';
 
 
@@ -22,6 +23,7 @@ export default (app: any) => {
   app.use(MenuItem);
   app.use(MenuItemGroup);
   app.use(SubMenu);
+  app.use(Carousel);
 }
 
 
