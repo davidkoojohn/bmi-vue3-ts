@@ -1,1 +1,0 @@
-import{d as a,p as e,o as r}from"./vendor.116f3db4.js";var s=a({setup(a){var s;return console.log((s={firstName:"123",lastName:"john"}).firstName+" - "+s.lastName),(a,s)=>(r(),e("h1",null,"TypeScript"))}});export{s as default};
